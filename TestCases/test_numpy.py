@@ -54,6 +54,14 @@ def test_linear_algebra():
   x = solve(a,b)
   assert_equal([2., 3.], x)
  
+def test_tuple():
+  a = array([1,2])
+  (x,y) = a
+  assert_equal(1, x)
+  assert_equal(2, y)
+  x,y = a
+  assert_equal(1, x)
+  assert_equal(2, y)
 
 
 from numpy.testing import assert_, assert_array_equal, assert_allclose, run_module_suite

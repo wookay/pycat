@@ -14,16 +14,22 @@ def test_sudoku_square():
     [449., 449.],
     [  0., 449.]], np.float32)
   gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+  #cv2.imshow('', gray)
+  #cv2.waitKey()
   thresh = cv2.adaptiveThreshold(gray,255,1,1,5,2)
+  #cv2.imshow('', thresh)
+  #cv2.waitKey()
   _,contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
   image_area = gray.size
   approx = None
   for i in contours:
     if cv2.contourArea(i)> image_area/2:
       peri = cv2.arcLength(i,True)
-      approx = cv2.approxPolyDP(i,0.02*peri,True)
-      #Blue = (255,0,0)
-      #cv2.drawContours(img,[approx],0,Blue,2,0)
+      approx = cv2.approxPolyDP(i, 0.1*peri, True)
+      Blue = (255,0,0)
+      cv2.drawContours(img, [approx], 0, Blue, 2,0)
+      #cv2.imshow('', img)
+      #cv2.waitKey()
   assert_equal([
     [[491,  68]],
     [[ 73,  84]],
@@ -35,6 +41,24 @@ def test_sudoku_square():
   #cv2.polylines(img, [approx], True, Red, 2)
   #cv2.imshow('', img)
   #cv2.waitKey()
+
+
+
+# What are contours?
+#   Contours can be explained simply as a curve joining all the continuous
+#   points (along the boundary), having same color or intensity. The contours
+#   are a useful tool for shape analysis and object detection and recognition.
+
+# cv2.arcLength
+#   Calculates a contour perimeter or a curve length.
+#   The function computes a curve length or a closed contour perimeter.
+
+# cv2.approxPolyDP
+#   Approximates a polygonal curve(s) with the specified precision.
+#   The functions approxPolyDP approximate a curve or a polygon with another
+#   curve/polygon with less vertices so that the distance between them is
+#   less or equal to the specified precision.
+#   It uses the Douglas-Peucker algorithm
 
 
 def test_perspective_transform():
