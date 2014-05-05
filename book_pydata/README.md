@@ -5,6 +5,7 @@ Python for Data Analysis 파이썬 라이브러리를 활용한 데이터 분석
  * <http://www.hanbit.co.kr/book/look.html?isbn=978-89-6848-047-8>
  * <https://github.com/pydata/pydata-book>
 
+
 IPython으로 정리
 ================
  * 1장 - 시작하기 전에 [Chapter1.ipynb](http://nbviewer.ipython.org/github/wookay/pycat/blob/master/book_pydata/Chapter1.ipynb)
@@ -17,3 +18,9 @@ IPython으로 정리
  * 8장 - 도식화와 시각화 [Chapter8.ipynb](http://nbviewer.ipython.org/github/wookay/pycat/blob/master/book_pydata/Chapter8.ipynb)
 
  * 타이핑 중
+
+
+
+참고
+====
+ * Python for Signal Processing <https://github.com/unpingco/Python-for-Signal-Processing>
