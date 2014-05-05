@@ -16,6 +16,4 @@ IPython으로 정리
  * 7장 - 데이터 준비하기: 다듬기, 변형, 병합 [Chapter7.ipynb](http://nbviewer.ipython.org/github/wookay/pycat/blob/master/book_pydata/Chapter7.ipynb)
  * 8장 - 도식화와 시각화 [Chapter8.ipynb](http://nbviewer.ipython.org/github/wookay/pycat/blob/master/book_pydata/Chapter8.ipynb)
 
- ...
- 타이핑 중
- ....
+ * 타이핑 중
