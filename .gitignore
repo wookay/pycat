@@ -1,3 +1,6 @@
 *.pyc
 *.swp
+pycat.egg-info/
+build/
 .DS_Store
+.coverage

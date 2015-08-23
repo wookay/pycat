@@ -1,0 +1,18 @@
+language: python
+python:
+  - 2.7
+  - 3.4
+  - pypy
+before_install:
+  - python --version
+  - pip --version
+  - uname -a
+install:
+  - pip install -r requirements-test.txt
+  - pip install coveralls
+script:
+  - coverage run --source=test setup.py test
+after_success:
+  - coveralls
+notifications:
+  email: false
