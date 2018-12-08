@@ -1,14 +1,16 @@
 language: python
-python:
-  - 2.7
-  - 3.4
-  - pypy
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
 before_install:
   - python --version
   - pip --version
   - uname -a
 install:
-  - pip install -r requirements-test.txt
+  - pwd
+  - pip install .
   - pip install coveralls
 script:
   - coverage run --source=test setup.py test
