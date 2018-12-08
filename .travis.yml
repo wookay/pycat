@@ -10,7 +10,7 @@ before_install:
   - uname -a
 install:
   - pwd
-  - pip install .
+  - python setup.py install
   - pip install coveralls
 script:
   - coverage run --source=test setup.py test
