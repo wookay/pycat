@@ -1,6 +1,7 @@
 import unittest
 from pkg_resources import parse_version
 import pycat
+import types
 
 class PycatTestCase(unittest.TestCase):
 
@@ -11,3 +12,8 @@ class PycatTestCase(unittest.TestCase):
 
   def test_int(self):
     self.assertEqual(3, 1+2)
+
+  def test_type(self):
+    def f():
+      pass
+    self.assertTrue(isinstance(f, types.FunctionType))
